@@ -33,3 +33,7 @@
 
         genesis_update_settings( array( 'site_layout' => 'full-width-content' ) );
     } );
+
+    add_action( 'wp_enqueue_scripts', function() {
+        wp_enqueue_style( 'google-fonts', 'https://use.typekit.net/pxo8ien.css' );
+    } );

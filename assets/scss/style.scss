@@ -6,10 +6,6 @@
  * Template: genesis
  */
 
-body {
-    display: flex;
-}
-
-::placeholder {
-    color: orange;
-}
+@import 'variables';
+@import 'vendor/normalize';
+@import 'typography';

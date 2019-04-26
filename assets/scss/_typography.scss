@@ -1,0 +1,107 @@
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $primary-font;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.33;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 $base-spacing 0;
+}
+
+a {
+    color: $link-color;
+    transition: all 350ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $hover-link-color;
+    }
+}
+
+ol,
+ul {
+    margin: 0 0 $base-spacing $base-spacing;
+
+    ol,
+    ul {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+}
+
+dl {
+    margin: 0 0 $base-spacing;
+
+    dt {
+        font-weight: 800;
+    }
+
+    dd {
+        line-height: 1.33;
+        margin: 0 0 $base-spacing 0;
+    }
+}
+
+blockquote {
+    border-top: 3px solid map-get( $white, "200" );
+    border-bottom: 3px solid map-get( $white, "200" );
+    margin: ( $base-spacing / 2 ) $base-spacing;
+    padding: ( $base-spacing / 2 );
+
+    p {
+        margin: 0;
+    }
+
+    cite {
+        display: block;
+        margin-top: $base-spacing;
+    }
+}
+
+table {
+    border: 1px solid map-get( $white, "200" );
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px solid map-get( $white, "200" );
+        padding: ( $base-spacing / 4 );
+    }
+}
+
+abbr[title],
+acronym {
+    border-bottom: 1px dashed $text-color;
+    cursor: help;
+    text-decoration: none;
+}
+
+pre {
+    border-top: 3px solid map-get( $white, "200" );
+    border-bottom: 3px solid map-get( $white, "200" );
+    margin: ( $base-spacing / 2 ) $base-spacing;
+    overflow: scroll;
+    padding: ( $base-spacing / 2 );
+}
+
+code,
+ins,
+kbd,
+tt,
+var {
+    background-color: map-get( $blue, "200" );
+    padding: 2px;
+}
+
+var {
+    font-family: monospace, monospace;
+    font-style: normal;
+}
