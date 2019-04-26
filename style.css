@@ -311,6 +311,14 @@ template {
 [hidden] {
   display: none; }
 
+html {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: inherit; }
+  *::before, *::after {
+    box-sizing: inherit; }
+
 body {
   background-color: #fbfbf9;
   color: #1c1c17;
@@ -393,3 +401,66 @@ var {
 var {
   font-family: monospace, monospace;
   font-style: normal; }
+
+figure,
+img {
+  /**
+     * Somewhere along the line, WP decided to add an inline style with the
+     * width of a <figure> when adding media to a post. Because of this change,
+     * setting `max-width` as a percentage won't work and we need to coerce
+     * this value to pixels instead; in this case, we want a 30px margin on
+     * either side.
+     */
+  max-width: calc( 100vw - 60px);
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto; }
+
+.alignleft {
+  float: left;
+  margin: 0 30px 30px 0; }
+
+.alignright {
+  float: right;
+  margin: 0 0 30px 30px; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+.wp-caption-text {
+  color: #292a22;
+  font-style: italic; }
+
+.gallery-item {
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  vertical-align: top; }
+  .gallery-columns-1 .gallery-item {
+    width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    width: 33.33333%; }
+  .gallery-columns-4 .gallery-item {
+    width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    width: 16.66667%; }
+  .gallery-columns-7 .gallery-item {
+    width: 14.28571%; }
+  .gallery-columns-8 .gallery-item {
+    width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    width: 11.11111%; }
+  .gallery-item img {
+    max-width: 100%; }
