@@ -5,4 +5,19 @@
  * License: GPL-2.0
  */
 body {
-  width: 55.55556%; }
+  display: flex; }
+
+::-webkit-input-placeholder {
+  color: orange; }
+
+::-moz-placeholder {
+  color: orange; }
+
+:-ms-input-placeholder {
+  color: orange; }
+
+::-ms-input-placeholder {
+  color: orange; }
+
+::placeholder {
+  color: orange; }
