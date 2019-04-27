@@ -1,0 +1,98 @@
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    background-color: map-get( $blue, "300" );
+    color: map-get( $white, "100" );
+    padding: 0 $base-spacing;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 350ms ease-in-out;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    .home-link {
+        margin-right: $base-spacing;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            transform: scale( 1.1 );
+        }
+    }
+}
+
+.sandwich-bar {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    width: auto;
+    background-color: map-get( $blue, "300" );
+    color: map-get( $white, "100" );
+    font-size: 32px;
+    z-index: 10;
+}
+
+.search-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 $base-spacing;
+
+    .search-form {
+        display: none;
+        flex: auto;
+        margin-left: $base-spacing;
+    }
+
+    .search-form-input {
+        width: 100%;
+        appearance: none;
+        background-color: map-get( $blue, "400" );
+        border: none;
+        border-radius: 0;
+        color: map-get( $white, "100" );
+        line-height: $base-line-height;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &::placeholder {
+            color: map-get( $white, "100" );
+        }
+    }
+
+    .search-form-submit {
+        display: none;
+    }
+}
+
+.sandwich-button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    line-height: $base-line-height;
+    padding: 0;
+    transition: all 350ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: scale( 1.1 );
+    }
+}
+
+body::before,
+body::after {
+    content: ' ';
+    display: block;
+    background-color: map-get( $blue, "300" );
+    height: 48px;
+    width: 100%;
+}

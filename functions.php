@@ -24,6 +24,9 @@
         ) );
 
         unregister_sidebar( 'sidebar' );
+
+        remove_action( 'genesis_header', 'genesis_do_header' );
+        remove_action( 'genesis_after_header', 'genesis_do_nav' );
     }, 15 );
 
     add_action( 'after_switch_theme', function() {
@@ -36,4 +39,7 @@
 
     add_action( 'wp_enqueue_scripts', function() {
         wp_enqueue_style( 'google-fonts', 'https://use.typekit.net/pxo8ien.css' );
+        wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array(), CHILD_THEME_VERSION, false );
     } );
+
+    require_once( 'lib/header.php' );
