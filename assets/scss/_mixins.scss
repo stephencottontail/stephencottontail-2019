@@ -1,0 +1,41 @@
+@mixin raindrop {
+    @media screen and (min-width: $raindrop ) {
+        @content;
+    }
+}
+
+@mixin puddle {
+    @media screen and (min-width: $puddle ) {
+        @content;
+    }
+}
+
+@mixin pond {
+    @media screen and (min-width: $pond ) {
+        @content;
+    }
+}
+
+@mixin admin-bar {
+    @media screen and (min-width: $admin-bar ) {
+        @content;
+    }
+}
+
+@mixin river {
+    @media screen and (min-width: $river ) {
+        @content;
+    }
+}
+
+@mixin lake {
+    @media screen and (min-width: $lake ) {
+        @content;
+    }
+}
+
+@mixin ocean {
+    @media screen and (min-width: $ocean ) {
+        @content;
+    }
+}

@@ -1,0 +1,33 @@
+.screen-reader-text {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    border: 0;
+    clip: rect( 1px, 1px, 1px, 1px );
+    clip-path: inset( 50% );
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    word-wrap: normal !important;
+
+    &:focus {
+        display: block;
+        height: auto;
+        width: auto;
+        top: 5px;
+        left: 5px;
+        background-color: map-get( $blue, "100" );
+        border: 1px solid map-get( $blue, "500" );
+        clip: auto !important;
+        clip-path: none;
+        color: 1px solid map-get( $blue, "500" );
+        padding: ( $base-spacing / 2 );
+        z-index: 100000;
+    }
+}
+
+.genesis-skip-link {
+    position: absolute;
+    left: -9999em;
+}
+

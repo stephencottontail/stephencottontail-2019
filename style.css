@@ -311,6 +311,37 @@ template {
 [hidden] {
   display: none; }
 
+.screen-reader-text {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  word-wrap: normal !important; }
+  .screen-reader-text:focus {
+    display: block;
+    height: auto;
+    width: auto;
+    top: 5px;
+    left: 5px;
+    background-color: #eff4f5;
+    border: 1px solid #0a3543;
+    clip: auto !important;
+    -webkit-clip-path: none;
+            clip-path: none;
+    color: 1px solid #0a3543;
+    padding: 15px;
+    z-index: 100000; }
+
+.genesis-skip-link {
+  position: absolute;
+  left: -9999em; }
+
 html {
   box-sizing: border-box; }
 
