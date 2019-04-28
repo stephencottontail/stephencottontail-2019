@@ -32,6 +32,7 @@
 .sandwich-bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 48px;
     width: auto;
     background-color: map-get( $blue, "300" );
@@ -50,6 +51,10 @@
         display: none;
         flex: auto;
         margin-left: $base-spacing;
+
+        .search-toggle-active & {
+            display: block;
+        }
     }
 
     .search-form-input {

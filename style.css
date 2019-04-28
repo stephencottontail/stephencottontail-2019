@@ -520,6 +520,7 @@ object {
 .sandwich-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 48px;
   width: auto;
   background-color: #668c99;
@@ -536,6 +537,8 @@ object {
     display: none;
     flex: auto;
     margin-left: 30px; }
+    .search-toggle-active .search-bottom-bar .search-form {
+      display: block; }
   .search-bottom-bar .search-form-input {
     width: 100%;
     -webkit-appearance: none;
@@ -583,9 +586,44 @@ body::after {
   height: 48px;
   width: 100%; }
 
+@-webkit-keyframes fadeMenuIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeMenuIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeMenuOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeMenuOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .nav-primary {
   display: none;
+  -webkit-animation-name: fadeMenuOut;
+          animation-name: fadeMenuOut;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
   margin: 15px 0; }
+  .menu-toggle-active .nav-primary {
+    display: block;
+    transition: all 350ms ease-in-out;
+    -webkit-animation-name: fadeMenuIn;
+            animation-name: fadeMenuIn;
+    -webkit-animation-duration: 350ms;
+            animation-duration: 350ms; }
   .nav-primary ul {
     list-style: none;
     margin: 0;

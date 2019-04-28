@@ -1,6 +1,35 @@
+@keyframes fadeMenuIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeMenuOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .nav-primary {
     display: none;
+    animation-name: fadeMenuOut;
+    animation-duration: 350ms;
     margin: ( $base-spacing / 2 ) 0;
+
+    .menu-toggle-active & {
+        display: block;
+        transition: all 350ms ease-in-out;
+        animation-name: fadeMenuIn;
+        animation-duration: 350ms;
+    }
 
     ul {
         list-style: none;
