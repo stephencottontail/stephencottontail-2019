@@ -18,7 +18,7 @@
     }
 }
 
-.nav-primary {
+.nav-wrapper {
     display: none;
     animation-name: fadeMenuOut;
     animation-duration: 350ms;
@@ -41,5 +41,23 @@
             margin-bottom: ( $base-spacing / 2 );
             text-transform: lowercase;
         }
+    }
+
+    /* logo stuff */
+    #left-eye,
+    #right-eye,
+    #mouth,
+    #left-ear,
+    #right-ear {
+        stroke: map-get( $white, "500" );
+    }
+
+    #left-pupil,
+    #right-pupil {
+        fill: map-get( $white, "500" );
+    }
+
+    #whiskers {
+        fill: map-get( $blue, "200" );
     }
 }

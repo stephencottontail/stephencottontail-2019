@@ -18,7 +18,13 @@
                 <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">SKD</a>
                 <button id="menu-toggle" class="sandwich-button menu-toggle" aria-expanded="false" aria-pressed="false"><i class="fas fa-bars"></i><span class="screen-reader-text">Open Menu</span></button>
             </div>
-            <?php genesis_do_nav(); ?>
+            <div class="nav-wrapper">
+                <?php
+                echo file_get_contents( get_stylesheet_directory() . '/images/skd-logo.svg' );
+
+                genesis_do_nav();
+                ?>
+            </div>
         </div>
     <?php } );
 

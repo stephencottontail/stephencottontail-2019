@@ -610,25 +610,37 @@ body::after {
   100% {
     opacity: 0; } }
 
-.nav-primary {
+.nav-wrapper {
   display: none;
   -webkit-animation-name: fadeMenuOut;
           animation-name: fadeMenuOut;
   -webkit-animation-duration: 350ms;
           animation-duration: 350ms;
-  margin: 15px 0; }
-  .menu-toggle-active .nav-primary {
+  margin: 15px 0;
+  /* logo stuff */ }
+  .menu-toggle-active .nav-wrapper {
     display: block;
     transition: all 350ms ease-in-out;
     -webkit-animation-name: fadeMenuIn;
             animation-name: fadeMenuIn;
     -webkit-animation-duration: 350ms;
             animation-duration: 350ms; }
-  .nav-primary ul {
+  .nav-wrapper ul {
     list-style: none;
     margin: 0;
     padding: 0;
     text-transform: uppercase; }
-    .nav-primary ul ul {
+    .nav-wrapper ul ul {
       margin-bottom: 15px;
       text-transform: lowercase; }
+  .nav-wrapper #left-eye,
+  .nav-wrapper #right-eye,
+  .nav-wrapper #mouth,
+  .nav-wrapper #left-ear,
+  .nav-wrapper #right-ear {
+    stroke: #1c1c17; }
+  .nav-wrapper #left-pupil,
+  .nav-wrapper #right-pupil {
+    fill: #1c1c17; }
+  .nav-wrapper #whiskers {
+    fill: #daebf1; }
