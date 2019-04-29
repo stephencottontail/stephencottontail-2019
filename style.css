@@ -496,6 +496,17 @@ object {
   .gallery-item img {
     max-width: 100%; }
 
+.site-inner {
+  padding: 30px; }
+  @media screen and (min-width: 1025px) {
+    .site-inner {
+      width: 90%;
+      margin: 0 5%; } }
+  @media screen and (min-width: 1201px) {
+    .site-inner {
+      width: 70%;
+      margin: 0 15%; } }
+
 .header-wrapper {
   position: fixed;
   top: 0;
@@ -644,3 +655,30 @@ body::after {
     fill: #1c1c17; }
   .nav-wrapper #whiskers {
     fill: #daebf1; }
+
+.entry {
+  margin-bottom: 30px; }
+  .entry::after {
+    display: block;
+    content: ' ';
+    height: 15px;
+    width: 100%;
+    background-color: #cccdcb; }
+
+.entry-title {
+  font-size: 3em;
+  line-height: 1.1;
+  word-wrap: break-word; }
+
+.entry-meta {
+  text-align: right; }
+  .single .entry-meta {
+    text-align: left; }
+
+.entry-footer {
+  padding-top: 30px; }
+
+.entry-categories,
+.entry-tags,
+.post-edit-link {
+  display: block; }

@@ -1,0 +1,13 @@
+.site-inner {
+    padding: $base-spacing;
+
+    @include river {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    @include lake {
+        width: 70%;
+        margin: 0 15%;
+    }
+}

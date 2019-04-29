@@ -1,0 +1,35 @@
+.entry {
+    margin-bottom: $base-spacing;
+
+    &::after {
+        display: block;
+        content: ' ';
+        height: ( $base-spacing / 2 );
+        width: 100%;
+        background-color: map-get( $white, "200" );
+    }
+}
+
+.entry-title {
+    font-size: 3em;
+    line-height: 1.1;
+    word-wrap: break-word;
+}
+
+.entry-meta {
+    text-align: right;
+
+    .single & {
+        text-align: left;
+    }
+}
+
+.entry-footer {
+    padding-top: $base-spacing;
+}
+
+.entry-categories,
+.entry-tags,
+.post-edit-link {
+    display: block;
+}
