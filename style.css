@@ -644,6 +644,11 @@ body::after {
     .nav-wrapper ul ul {
       margin-bottom: 15px;
       text-transform: lowercase; }
+  .nav-wrapper #logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 50%; }
   .nav-wrapper #left-eye,
   .nav-wrapper #right-eye,
   .nav-wrapper #mouth,
@@ -682,3 +687,20 @@ body::after {
 .entry-tags,
 .post-edit-link {
   display: block; }
+
+#logo {
+  float: left;
+  width: 25%;
+  height: auto;
+  margin: 0 30px 30px 0; }
+
+#left-eye,
+#right-eye {
+  fill: #1c1c17;
+  stroke: #1c1c17; }
+
+#whiskers {
+  fill: #668c99; }
+
+.front-page-loop {
+  clear: both; }

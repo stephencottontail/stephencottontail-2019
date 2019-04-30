@@ -1,0 +1,20 @@
+#logo {
+    float: left;
+    width: 25%;
+    height: auto;
+    margin: 0 $base-spacing $base-spacing 0;
+}
+
+#left-eye,
+#right-eye {
+    fill: map-get( $white, "500" );
+    stroke: map-get( $white, "500" );
+}
+
+#whiskers {
+    fill: map-get( $blue, "300" );
+}
+
+.front-page-loop {
+    clear: both;
+}
