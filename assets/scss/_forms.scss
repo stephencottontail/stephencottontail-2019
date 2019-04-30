@@ -1,0 +1,69 @@
+.button,
+button,
+input[type="submit"],
+input[type="cancel"],
+input[type="reset"] {
+    background-color: map-get( $blue, "300" );
+    border: 2px solid map-get( $blue, "300" );
+    border-radius: 0;
+    color: map-get( $white, "100" );
+    line-height: $base-line-height;
+    padding: ( $base-spacing / 6 ) ( $base-spacing / 3 );
+    text-decoration: none;
+    transition: all 350ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: map-get( $blue, "500" );
+        border-color: map-get( $blue, "500" );
+        color: map-get( $white, "100" );
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    appearance: none;
+    background-color: inherit;
+    border: 1px solid map-get( $blue, "300" );
+    border-radius: 0;
+    box-sizing: inherit;
+    color: inherit;
+    line-height: $base-line-height;
+    padding: ( $base-spacing / 6 ) ( $base-spacing / 3 );
+}
+
+label {
+    display: block;
+}
+
+.search-form {
+    display: flex;
+    align-items: stretch;
+
+    .search-form-submit {
+        margin-left: 4px;
+    }
+}
+
+/**
+ * this whole thing is awfully fragile, but as long as WordPress doesn't
+ * change the output of the post password form...
+ */
+.post-password-form {
+    p:last-of-type {
+        display: flex;
+        align-items: stretch;
+    }
+
+    input[type="password"] {
+        height: 44px; /* not sure why it's necessary to force the height here */
+    }
+
+    input[type="submit"] {
+        margin-left: 4px;
+    }
+}

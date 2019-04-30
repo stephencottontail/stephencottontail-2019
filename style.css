@@ -496,6 +496,73 @@ object {
   .gallery-item img {
     max-width: 100%; }
 
+.button, .older-posts-link, .pagination a, .entry-pagination .post-page-numbers,
+button,
+input[type="submit"],
+input[type="cancel"],
+input[type="reset"] {
+  background-color: #668c99;
+  border: 2px solid #668c99;
+  border-radius: 0;
+  color: #fbfbf9;
+  line-height: 1.5;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: all 350ms ease-in-out; }
+  .button:hover, .older-posts-link:hover, .pagination a:hover, .entry-pagination .post-page-numbers:hover, .button:focus, .older-posts-link:focus, .pagination a:focus, .entry-pagination .post-page-numbers:focus,
+  button:hover,
+  button:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  input[type="cancel"]:hover,
+  input[type="cancel"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus {
+    background-color: #0a3543;
+    border-color: #0a3543;
+    color: #fbfbf9; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: inherit;
+  border: 1px solid #668c99;
+  border-radius: 0;
+  box-sizing: inherit;
+  color: inherit;
+  line-height: 1.5;
+  padding: 5px 10px; }
+
+label {
+  display: block; }
+
+.search-form {
+  display: flex;
+  align-items: stretch; }
+  .search-form .search-form-submit {
+    margin-left: 4px; }
+
+/**
+ * this whole thing is awfully fragile, but as long as WordPress doesn't
+ * change the output of the post password form...
+ */
+.post-password-form p:last-of-type {
+  display: flex;
+  align-items: stretch; }
+
+.post-password-form input[type="password"] {
+  height: 44px;
+  /* not sure why it's necessary to force the height here */ }
+
+.post-password-form input[type="submit"] {
+  margin-left: 4px; }
+
 .site-inner {
   padding: 30px; }
   @media screen and (min-width: 1025px) {
@@ -552,14 +619,9 @@ object {
       display: block; }
   .search-bottom-bar .search-form-input {
     width: 100%;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
     background-color: #0d4659;
-    border: none;
-    border-radius: 0;
-    color: #fbfbf9;
-    line-height: 1.5;
+    border: 0;
+    color: inherit;
     padding-top: 0;
     padding-bottom: 0; }
     .search-bottom-bar .search-form-input::-webkit-input-placeholder {
@@ -576,16 +638,13 @@ object {
     display: none; }
 
 .sandwich-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   background-color: transparent;
   border: none;
   color: inherit;
   line-height: 1.5;
-  padding: 0;
-  transition: all 350ms ease-in-out; }
+  padding: 0; }
   .sandwich-button:hover, .sandwich-button:focus {
+    background-color: transparent;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
 
@@ -705,18 +764,6 @@ body::after {
 .front-page-loop {
   clear: both; }
 
-.older-posts-link {
-  background-color: #668c99;
-  border: 2px solid #668c99;
-  color: #fbfbf9;
-  padding: 5px 10px;
-  text-decoration: none;
-  transition: all 350ms ease-in-out; }
-  .older-posts-link:hover, .older-posts-link:focus {
-    background-color: #0a3543;
-    border-color: #0a3543;
-    color: #fbfbf9; }
-
 .pagination {
   display: flex;
   align-items: center;
@@ -724,17 +771,6 @@ body::after {
   .pagination .alignleft,
   .pagination .alignright {
     margin: 0; }
-  .pagination a {
-    background-color: #668c99;
-    border: 2px solid #668c99;
-    color: #fbfbf9;
-    padding: 5px 10px;
-    text-decoration: none;
-    transition: all 350ms ease-in-out; }
-    .pagination a:hover, .pagination a:focus {
-      background-color: #0a3543;
-      border-color: #0a3543;
-      color: #fbfbf9; }
   .pagination .pagination-next {
     margin-left: auto; }
 
@@ -742,14 +778,8 @@ body::after {
   display: block; }
   .entry-pagination .post-page-numbers {
     display: inline-block;
-    background-color: #668c99;
-    border: 2px solid #668c99;
-    color: #fbfbf9;
-    padding: 0 10px 5px;
-    /* numbers are weird in this font */
-    text-decoration: none;
-    transition: all 350ms ease-in-out; }
-    .entry-pagination .post-page-numbers.current, .entry-pagination .post-page-numbers:hover, .entry-pagination .post-page-numbers:focus {
+    padding-top: 0;
+    /* numbers are a bit weird in this font, so we remove the top padding for a better look */ }
+    .entry-pagination .post-page-numbers.current {
       background-color: #0a3543;
-      border-color: #0a3543;
-      color: #fbfbf9; }
+      border-color: #0a3543; }

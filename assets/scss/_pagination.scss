@@ -1,17 +1,5 @@
 .older-posts-link {
-    background-color: map-get( $blue, "300" );
-    border: 2px solid map-get( $blue, "300" );
-    color: map-get( $white, "100" );
-    padding: ( $base-spacing / 6 ) ( $base-spacing / 3 );
-    text-decoration: none;
-    transition: all 350ms ease-in-out;
-
-    &:hover,
-    &:focus {
-        background-color: map-get( $blue, "500" );
-        border-color: map-get( $blue, "500" );
-        color: map-get( $white, "100" );
-    }
+    @extend .button;
 }
 
 .pagination {
@@ -25,19 +13,7 @@
     }
 
     a {
-        background-color: map-get( $blue, "300" );
-        border: 2px solid map-get( $blue, "300" );
-        color: map-get( $white, "100" );
-        padding: ( $base-spacing / 6 ) ( $base-spacing / 3 );
-        text-decoration: none;
-        transition: all 350ms ease-in-out;
-
-        &:hover,
-        &:focus {
-            background-color: map-get( $blue, "500" );
-            border-color: map-get( $blue, "500" );
-            color: map-get( $white, "100" );
-        }
+        @extend .button;
     }
 
     .pagination-next {
@@ -49,20 +25,14 @@
     display: block;
 
     .post-page-numbers {
-        display: inline-block;
-        background-color: map-get( $blue, "300" );
-        border: 2px solid map-get( $blue, "300" );
-        color: map-get( $white, "100" );
-        padding: 0 ( $base-spacing / 3 ) ( $base-spacing / 6 ); /* numbers are weird in this font */
-        text-decoration: none;
-        transition: all 350ms ease-in-out;
+        @extend .button;
 
-        &.current,
-        &:hover,
-        &:focus {
+        display: inline-block;
+        padding-top: 0; /* numbers are a bit weird in this font, so we remove the top padding for a better look */
+
+        &.current {
             background-color: map-get( $blue, "500" );
             border-color: map-get( $blue, "500" );
-            color: map-get( $white, "100" );
         }
     }
 }

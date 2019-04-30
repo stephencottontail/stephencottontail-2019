@@ -59,12 +59,9 @@
 
     .search-form-input {
         width: 100%;
-        appearance: none;
         background-color: map-get( $blue, "400" );
-        border: none;
-        border-radius: 0;
-        color: map-get( $white, "100" );
-        line-height: $base-line-height;
+        border: 0;
+        color: inherit;
         padding-top: 0;
         padding-bottom: 0;
 
@@ -79,16 +76,15 @@
 }
 
 .sandwich-button {
-    appearance: none;
     background-color: transparent;
     border: none;
     color: inherit;
     line-height: $base-line-height;
     padding: 0;
-    transition: all 350ms ease-in-out;
 
     &:hover,
     &:focus {
+        background-color: transparent;
         transform: scale( 1.1 );
     }
 }
