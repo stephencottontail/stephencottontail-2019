@@ -27,6 +27,7 @@
 
         remove_action( 'genesis_header', 'genesis_do_header' );
         remove_action( 'genesis_after_header', 'genesis_do_nav' );
+        remove_action( 'genesis_entry_content', 'genesis_do_post_content_nav', 12 );
 
         add_filter( 'genesis_post_info', function( $post_info ) {
             $post_info = 'Posted on [post_date] by [post_author]';
@@ -38,6 +39,29 @@
             $post_meta = '[post_categories before="Posted in "] [post_tags before="Tagged "] [post_comments] [post_edit_with_title]';
 
             return $post_meta;
+        } );
+
+        /**
+         * There's gotta be a better way to do this
+         */
+        add_action( 'genesis_entry_content', function() {
+            $before = genesis_markup( array(
+                'open'    => '<div %s>',
+                'context' => 'entry-pagination',
+                'echo'    => false
+            ) ) . '<span class="screen-reader-text">Pages</span>';
+
+            $after = genesis_markup( array(
+                'close'   => '</div>',
+                'context' => 'entry-pagination',
+                'echo'    => false
+            ) );
+
+            wp_link_pages( array(
+                'before'      => $before,
+                'after'       => $after,
+                'link_before' => genesis_a11y( 'screen-reader-text' ) ? sprintf( '<span class="screen-reader-text">%s</span>', 'Page ' ) : ''
+            ) );
         } );
     }, 15 );
 

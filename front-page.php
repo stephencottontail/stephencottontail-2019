@@ -21,4 +21,8 @@
         genesis_reset_loops();
     } );
 
+    add_action( 'genesis_after_loop', function() {
+        printf( '<a href="%s" class="older-posts-link">&laquo; Older Posts</a>', esc_url( get_permalink( get_option( 'page_for_posts' ) ) ) );
+    } );
+
     genesis();

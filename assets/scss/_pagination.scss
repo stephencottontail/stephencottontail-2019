@@ -1,0 +1,68 @@
+.older-posts-link {
+    background-color: map-get( $blue, "300" );
+    border: 2px solid map-get( $blue, "300" );
+    color: map-get( $white, "100" );
+    padding: ( $base-spacing / 6 ) ( $base-spacing / 3 );
+    text-decoration: none;
+    transition: all 350ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: map-get( $blue, "500" );
+        border-color: map-get( $blue, "500" );
+        color: map-get( $white, "100" );
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .alignleft,
+    .alignright {
+        margin: 0;
+    }
+
+    a {
+        background-color: map-get( $blue, "300" );
+        border: 2px solid map-get( $blue, "300" );
+        color: map-get( $white, "100" );
+        padding: ( $base-spacing / 6 ) ( $base-spacing / 3 );
+        text-decoration: none;
+        transition: all 350ms ease-in-out;
+
+        &:hover,
+        &:focus {
+            background-color: map-get( $blue, "500" );
+            border-color: map-get( $blue, "500" );
+            color: map-get( $white, "100" );
+        }
+    }
+
+    .pagination-next {
+        margin-left: auto;
+    }
+}
+
+.entry-pagination {
+    display: block;
+
+    .post-page-numbers {
+        display: inline-block;
+        background-color: map-get( $blue, "300" );
+        border: 2px solid map-get( $blue, "300" );
+        color: map-get( $white, "100" );
+        padding: 0 ( $base-spacing / 3 ) ( $base-spacing / 6 ); /* numbers are weird in this font */
+        text-decoration: none;
+        transition: all 350ms ease-in-out;
+
+        &.current,
+        &:hover,
+        &:focus {
+            background-color: map-get( $blue, "500" );
+            border-color: map-get( $blue, "500" );
+            color: map-get( $white, "100" );
+        }
+    }
+}
