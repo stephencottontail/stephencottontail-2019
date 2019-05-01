@@ -1,0 +1,20 @@
+.archive-title {
+    font-size: 3em;
+    margin-bottom: ( $base-spacing / 2 );
+}
+
+.archive-description {
+    margin-bottom: $base-spacing;
+
+    .blog & {
+        display: none;
+    }
+
+    &::after {
+        display: block;
+        content: ' ';
+        height: ( $base-spacing / 2 );
+        width: 100%;
+        background-color: map-get( $white, "200" );
+    }
+}

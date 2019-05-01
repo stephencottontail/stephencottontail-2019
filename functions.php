@@ -40,7 +40,7 @@
         } );
 
         add_filter( 'genesis_post_meta', function( $post_meta ) {
-            $post_meta = '[post_categories before="Posted in "] [post_tags before="Tagged "] [post_comments] [post_edit_with_title]';
+            $post_meta = '[post_categories before="Posted in "] [post_tags before="Tagged "] [post_edit_with_title]';
 
             return $post_meta;
         } );
@@ -68,8 +68,15 @@
             ) );
         } );
 
-        remove_action( 'genesis_list_comments', 'genesis_default_list_comments' );
+        add_filter( 'genesis_prev_link_text', function() {
+            return '&laquo; Newer Posts';
+        } );
 
+        add_filter( 'genesis_next_link_text', function() {
+            return 'Older Posts &raquo;';
+        } );
+
+        remove_action( 'genesis_list_comments', 'genesis_default_list_comments' );
         remove_action( 'genesis_footer', 'genesis_do_footer' );
     }, 15 );
 
