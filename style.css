@@ -351,8 +351,8 @@ html {
     box-sizing: inherit; }
 
 body {
-  background-color: #fbfbf9;
-  color: #1c1c17;
+  background-color: #fefdfb;
+  color: #26200d;
   font-family: "maiola", sans-serif;
   font-size: 20px;
   line-height: 1.5;
@@ -390,8 +390,8 @@ dl {
     margin: 0 0 30px 0; }
 
 blockquote {
-  border-top: 3px solid #cccdcb;
-  border-bottom: 3px solid #cccdcb;
+  border-top: 3px solid #e0ddd1;
+  border-bottom: 3px solid #e0ddd1;
   margin: 15px 30px;
   padding: 15px; }
   blockquote p {
@@ -401,22 +401,22 @@ blockquote {
     margin-top: 30px; }
 
 table {
-  border: 1px solid #cccdcb;
+  border: 1px solid #e0ddd1;
   border-collapse: collapse; }
   table th,
   table td {
-    border: 1px solid #cccdcb;
+    border: 1px solid #e0ddd1;
     padding: 7.5px; }
 
 abbr[title],
 acronym {
-  border-bottom: 1px dashed #1c1c17;
+  border-bottom: 1px dashed #26200d;
   cursor: help;
   text-decoration: none; }
 
 pre {
-  border-top: 3px solid #cccdcb;
-  border-bottom: 3px solid #cccdcb;
+  border-top: 3px solid #e0ddd1;
+  border-bottom: 3px solid #e0ddd1;
   margin: 15px 30px;
   overflow: scroll;
   padding: 15px; }
@@ -470,7 +470,7 @@ object {
   margin: 0 auto; }
 
 .wp-caption-text {
-  color: #292a22;
+  color: #393013;
   font-style: italic; }
 
 .gallery-item {
@@ -508,7 +508,7 @@ input[type="reset"] {
   background-color: #668c99;
   border: 2px solid #668c99;
   border-radius: 0;
-  color: #fbfbf9;
+  color: #fefdfb;
   line-height: 1.5;
   padding: 5px 10px;
   text-decoration: none;
@@ -524,7 +524,7 @@ input[type="reset"] {
   input[type="reset"]:focus {
     background-color: #0a3543;
     border-color: #0a3543;
-    color: #fbfbf9; }
+    color: #fefdfb; }
 
 input[type="text"],
 input[type="email"],
@@ -587,7 +587,7 @@ label {
   right: 0;
   width: auto;
   background-color: #668c99;
-  color: #fbfbf9;
+  color: #fefdfb;
   padding: 0 30px;
   transition: top 150ms ease-in-out; }
   .admin-bar .site-header {
@@ -617,7 +617,7 @@ label {
   height: 48px;
   width: auto;
   background-color: #668c99;
-  color: #fbfbf9;
+  color: #fefdfb;
   font-size: 32px;
   z-index: 10; }
 
@@ -698,10 +698,10 @@ body::before {
   .nav-wrapper #mouth,
   .nav-wrapper #left-ear,
   .nav-wrapper #right-ear {
-    stroke: #1c1c17; }
+    stroke: #26200d; }
   .nav-wrapper #left-pupil,
   .nav-wrapper #right-pupil {
-    fill: #1c1c17; }
+    fill: #26200d; }
   .nav-wrapper #whiskers {
     fill: #daebf1; }
 
@@ -712,7 +712,7 @@ body::before {
     content: ' ';
     height: 15px;
     width: 100%;
-    background-color: #cccdcb; }
+    background-color: #e0ddd1; }
 
 .entry-title {
   font-size: 3em;
@@ -750,8 +750,8 @@ body::before {
 
 #left-eye,
 #right-eye {
-  fill: #1c1c17;
-  stroke: #1c1c17; }
+  fill: #26200d;
+  stroke: #26200d; }
 
 #whiskers {
   fill: #668c99; }
@@ -762,7 +762,7 @@ body::before {
 .site-footer {
   height: 48px;
   background-color: #668c99;
-  color: #fbfbf9;
+  color: #fefdfb;
   line-height: 48px; }
   .site-footer a {
     color: inherit; }
@@ -825,15 +825,15 @@ body::before {
     padding-top: 0;
     padding-bottom: 0; }
     .search-bottom-bar .search-form-input::-webkit-input-placeholder {
-      color: #fbfbf9; }
+      color: #fefdfb; }
     .search-bottom-bar .search-form-input::-moz-placeholder {
-      color: #fbfbf9; }
+      color: #fefdfb; }
     .search-bottom-bar .search-form-input:-ms-input-placeholder {
-      color: #fbfbf9; }
+      color: #fefdfb; }
     .search-bottom-bar .search-form-input::-ms-input-placeholder {
-      color: #fbfbf9; }
+      color: #fefdfb; }
     .search-bottom-bar .search-form-input::placeholder {
-      color: #fbfbf9; }
+      color: #fefdfb; }
   .search-bottom-bar .search-form-submit {
     display: none; }
 
@@ -850,7 +850,7 @@ body::before {
     content: ' ';
     height: 15px;
     width: 100%;
-    background-color: #cccdcb; }
+    background-color: #e0ddd1; }
 
 .entry-comments {
   margin: 30px 0; }
@@ -861,7 +861,7 @@ body::before {
     padding: 0; }
   @media screen and (min-width: 1025px) {
     .entry-comments .children {
-      border-left: 15px solid #cccdcb;
+      border-left: 15px solid #e0ddd1;
       margin-left: 30px;
       padding-left: 30px; } }
 
