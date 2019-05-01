@@ -28,8 +28,38 @@
         $( 'body' ).toggleClass( $this.attr( 'id' ) + '-active' );
     }
 
+    function debounce(func, wait, immediate) {
+	    var timeout;
+	    return function() {
+		    var context = this, args = arguments;
+		    var later = function() {
+			    timeout = null;
+			    if (!immediate) func.apply(context, args);
+		    };
+		    var callNow = immediate && !timeout;
+		    clearTimeout(timeout);
+		    timeout = setTimeout(later, wait);
+		    if (callNow) func.apply(context, args);
+	    };
+    };
+
+    var checkScrollPosition = debounce( function() {
+        if ( 783 < $( window ).width() ) {
+            return;
+        };
+
+        console.log( $( window ).scrollTop() );
+        if ( 46 < $( window ).scrollTop() ) {
+            $( 'body' ).addClass( 'scroll-position-past-admin-bar' );
+        } else {
+            $( 'body' ).removeClass( 'scroll-position-past-admin-bar' );
+        }
+    }, 200 );
+
     $( document ).ready( function() {
         menuToggle.on( 'click', _toggleElement );
         searchToggle.on( 'click', _toggleElement );
+
+        $( window ).scroll( checkScrollPosition );
     } );
 } )( jQuery );

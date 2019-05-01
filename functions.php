@@ -77,7 +77,7 @@
         wp_enqueue_style( 'google-fonts', 'https://use.typekit.net/pxo8ien.css' );
 
         wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array(), CHILD_THEME_VERSION, false );
-        wp_enqueue_script( 'toggles', get_theme_file_uri( 'assets/js/toggles.js' ), array( 'jquery' ), CHILD_THEME_VERSION, true );
+        wp_enqueue_script( 'sc2019-functions', get_theme_file_uri( 'assets/js/functions.js' ), array( 'jquery' ), CHILD_THEME_VERSION, true );
     } );
 
     require_once( 'lib/header.php' );

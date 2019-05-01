@@ -6,6 +6,19 @@
     background-color: map-get( $blue, "300" );
     color: map-get( $white, "100" );
     padding: 0 $base-spacing;
+    transition: top 150ms ease-in-out;
+
+    .admin-bar & {
+        top: 46px;
+
+        @include admin-bar() {
+            top: 32px;
+        }
+    }
+
+    .scroll-position-past-admin-bar & {
+        top: 0;
+    }
 
     a {
         color: inherit;
