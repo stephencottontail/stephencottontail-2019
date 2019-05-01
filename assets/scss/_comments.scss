@@ -1,0 +1,45 @@
+.entry-comments {
+    margin: $base-spacing 0;
+
+    .comment-list,
+    .children {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include river {
+        .children {
+            border-left: 15px solid map-get( $white, "200" );
+            margin-left: $base-spacing;
+            padding-left: $base-spacing;
+        }
+    }
+}
+
+.comment-body {
+    margin: ( $base-spacing * 2 ) 0;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .avatar {
+        flex: 0 96px;
+        margin: 0;
+        opacity: 0.5;
+    }
+
+    cite {
+        font-size: 36px;
+        margin-left: 4px;
+    }
+}
+
+@include river {
+    .comment-parent {
+        display: none;
+    }
+}

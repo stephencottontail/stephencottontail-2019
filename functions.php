@@ -68,6 +68,8 @@
             ) );
         } );
 
+        remove_action( 'genesis_list_comments', 'genesis_default_list_comments' );
+
         remove_action( 'genesis_footer', 'genesis_do_footer' );
     }, 15 );
 
@@ -88,4 +90,5 @@
 
     require_once( 'lib/header.php' );
     require_once( 'lib/post.php' );
+    require_once( 'lib/comments.php' );
     require_once( 'lib/footer.php' );
