@@ -54,40 +54,6 @@
     z-index: 10;
 }
 
-.search-bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 0 $base-spacing;
-
-    .search-form {
-        display: none;
-        flex: auto;
-        margin-left: $base-spacing;
-
-        .search-toggle-active & {
-            display: block;
-        }
-    }
-
-    .search-form-input {
-        width: 100%;
-        background-color: map-get( $blue, "400" );
-        border: 0;
-        color: inherit;
-        padding-top: 0;
-        padding-bottom: 0;
-
-        &::placeholder {
-            color: map-get( $white, "100" );
-        }
-    }
-
-    .search-form-submit {
-        display: none;
-    }
-}
-
 .sandwich-button {
     background-color: transparent;
     border: none;

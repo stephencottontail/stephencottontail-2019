@@ -621,37 +621,6 @@ label {
   font-size: 32px;
   z-index: 10; }
 
-.search-bottom-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 0 30px; }
-  .search-bottom-bar .search-form {
-    display: none;
-    flex: auto;
-    margin-left: 30px; }
-    .search-toggle-active .search-bottom-bar .search-form {
-      display: block; }
-  .search-bottom-bar .search-form-input {
-    width: 100%;
-    background-color: #0d4659;
-    border: 0;
-    color: inherit;
-    padding-top: 0;
-    padding-bottom: 0; }
-    .search-bottom-bar .search-form-input::-webkit-input-placeholder {
-      color: #fbfbf9; }
-    .search-bottom-bar .search-form-input::-moz-placeholder {
-      color: #fbfbf9; }
-    .search-bottom-bar .search-form-input:-ms-input-placeholder {
-      color: #fbfbf9; }
-    .search-bottom-bar .search-form-input::-ms-input-placeholder {
-      color: #fbfbf9; }
-    .search-bottom-bar .search-form-input::placeholder {
-      color: #fbfbf9; }
-  .search-bottom-bar .search-form-submit {
-    display: none; }
-
 .sandwich-button {
   background-color: transparent;
   border: none;
@@ -832,6 +801,39 @@ body::before {
         padding-right: 15px; }
       .footer-widget-area .widget:last-of-type {
         padding-left: 15px; } }
+
+.search-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 30px; }
+  .search-toggle-active .search-bottom-bar {
+    padding-right: 0; }
+  .search-bottom-bar .search-form {
+    display: none;
+    flex: auto;
+    margin-left: 30px; }
+    .search-toggle-active .search-bottom-bar .search-form {
+      display: block; }
+  .search-bottom-bar .search-form-input {
+    width: 100%;
+    background-color: #0d4659;
+    border: 0;
+    color: inherit;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .search-bottom-bar .search-form-input::-webkit-input-placeholder {
+      color: #fbfbf9; }
+    .search-bottom-bar .search-form-input::-moz-placeholder {
+      color: #fbfbf9; }
+    .search-bottom-bar .search-form-input:-ms-input-placeholder {
+      color: #fbfbf9; }
+    .search-bottom-bar .search-form-input::-ms-input-placeholder {
+      color: #fbfbf9; }
+    .search-bottom-bar .search-form-input::placeholder {
+      color: #fbfbf9; }
+  .search-bottom-bar .search-form-submit {
+    display: none; }
 
 .archive-title {
   font-size: 3em;
