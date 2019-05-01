@@ -1,0 +1,69 @@
+.site-footer {
+    height: 48px;
+    background-color: map-get( $blue, "300" );
+    color: map-get( $white, "100" );
+    line-height: 48px;
+
+    a {
+        color: inherit;
+    }
+
+}
+
+.creds {
+    margin-top: $base-spacing;
+    padding: 0 ( $base-spacing / 2 );
+    text-align: right;
+
+    @include puddle {
+        padding: 0 $base-spacing;
+    }
+
+    @include pond {
+        text-align: center;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .powered-by {
+        display: none;
+
+        @include pond {
+            display: inline;
+        }
+    }
+}
+
+.footer-widgets {
+    margin: $base-spacing 0;
+}
+
+.widget {
+    ul, ol {
+        margin-left: 0;
+    }
+
+    .widget-title {
+        font-size: 24px;
+    }
+}
+
+@include river {
+    .footer-widget-area {
+        display: flex;
+
+        .widget {
+            flex: 1 calc( ( 100% / 2 ) - 30px );
+
+            &:first-of-type {
+                padding-right: ( $base-spacing / 2 );
+            }
+
+            &:last-of-type {
+                padding-left: ( $base-spacing / 2 );
+            }
+        }
+    }
+}

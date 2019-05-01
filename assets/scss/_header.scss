@@ -102,8 +102,7 @@
     }
 }
 
-body::before,
-body::after {
+body::before {
     content: ' ';
     display: block;
     background-color: map-get( $blue, "300" );

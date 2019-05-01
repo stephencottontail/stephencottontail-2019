@@ -23,7 +23,11 @@
             'primary' => 'Primary Nav Menu'
         ) );
 
+        add_theme_support( 'genesis-footer-widgets', 1 );
+
+        unregister_sidebar( 'header-right' );
         unregister_sidebar( 'sidebar' );
+        unregister_sidebar( 'sidebar-alt' );
 
         remove_action( 'genesis_header', 'genesis_do_header' );
         remove_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -63,6 +67,8 @@
                 'link_before' => genesis_a11y( 'screen-reader-text' ) ? sprintf( '<span class="screen-reader-text">%s</span>', 'Page ' ) : ''
             ) );
         } );
+
+        remove_action( 'genesis_footer', 'genesis_do_footer' );
     }, 15 );
 
     add_action( 'after_switch_theme', function() {
@@ -82,3 +88,4 @@
 
     require_once( 'lib/header.php' );
     require_once( 'lib/post.php' );
+    require_once( 'lib/footer.php' );

@@ -1,4 +1,5 @@
-.site-inner {
+.site-inner,
+.footer-widgets > .wrap {
     padding: $base-spacing;
 
     @include river {
