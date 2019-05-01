@@ -1,4 +1,4 @@
-.header-wrapper {
+.site-header {
     position: fixed;
     top: 0;
     right: 0;
@@ -45,7 +45,7 @@
 .sandwich-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 48px;
     width: auto;
     background-color: map-get( $blue, "300" );

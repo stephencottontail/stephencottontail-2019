@@ -13,7 +13,6 @@
         add_theme_support( 'genesis-structural-wraps', array(
             'footer',
             'footer-widgets',
-            'header',
             'nav',
             'site-inner',
             'site-tagline'

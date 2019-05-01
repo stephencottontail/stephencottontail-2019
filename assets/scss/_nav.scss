@@ -46,9 +46,12 @@
     /* logo stuff */
     #logo {
         display: block;
-        float: none;
-        margin: 0 auto;
-        width: 50%;
+        width: 128px;
+        margin-bottom: ( $base-spacing / 2 );
+
+        @include pond {
+            width: 256px;
+        }
     }
 
     #left-eye,

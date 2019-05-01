@@ -581,7 +581,7 @@ label {
       width: 70%;
       margin: 0 15%; } }
 
-.header-wrapper {
+.site-header {
   position: fixed;
   top: 0;
   right: 0;
@@ -590,22 +590,22 @@ label {
   color: #fbfbf9;
   padding: 0 30px;
   transition: top 150ms ease-in-out; }
-  .admin-bar .header-wrapper {
+  .admin-bar .site-header {
     top: 46px; }
     @media screen and (min-width: 782px) {
-      .admin-bar .header-wrapper {
+      .admin-bar .site-header {
         top: 32px; } }
-  .scroll-position-past-admin-bar .header-wrapper {
+  .scroll-position-past-admin-bar .site-header {
     top: 0; }
-  .header-wrapper a {
+  .site-header a {
     color: inherit;
     text-decoration: none;
     transition: all 350ms ease-in-out; }
-    .header-wrapper a:hover, .header-wrapper a:focus {
+    .site-header a:hover, .site-header a:focus {
       text-decoration: underline; }
-  .header-wrapper .home-link {
+  .site-header .home-link {
     margin-right: 30px; }
-    .header-wrapper .home-link:hover, .header-wrapper .home-link:focus {
+    .site-header .home-link:hover, .site-header .home-link:focus {
       text-decoration: none;
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
@@ -613,7 +613,7 @@ label {
 .sandwich-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 48px;
   width: auto;
   background-color: #668c99;
@@ -688,9 +688,11 @@ body::before {
       text-transform: lowercase; }
   .nav-wrapper #logo {
     display: block;
-    float: none;
-    margin: 0 auto;
-    width: 50%; }
+    width: 128px;
+    margin-bottom: 15px; }
+    @media screen and (min-width: 769px) {
+      .nav-wrapper #logo {
+        width: 256px; } }
   .nav-wrapper #left-eye,
   .nav-wrapper #right-eye,
   .nav-wrapper #mouth,
