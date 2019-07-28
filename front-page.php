@@ -1,9 +1,5 @@
 <?php
 
-    add_action( 'genesis_before_content', function() {
-        echo file_get_contents( get_stylesheet_directory() . '/images/skd-logo.svg' );
-    } );
-
     add_action( 'genesis_loop', function() {
         $front_query = array(
             'ignore_sticky_posts' => 1,

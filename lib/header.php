@@ -13,23 +13,15 @@
 
     add_action( 'genesis_header', function() {
         ?>
-        <div class="sandwich-bar header-top-bar">
-            <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">SKD</a>
-            <button id="menu-toggle" class="sandwich-button menu-toggle" aria-expanded="false" aria-pressed="false"><i class="fas fa-bars"></i><span class="screen-reader-text">Open Menu</span></button>
-        </div>
         <div class="nav-wrapper">
-            <?php
-            echo file_get_contents( get_stylesheet_directory() . '/images/skd-logo.svg' );
-
-            genesis_do_nav();
-            ?>
+            <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo file_get_contents( get_stylesheet_directory() . '/images/skd-logo.svg' ); ?><span class="screen-reader-text">return home</span></a>
+            <?php genesis_do_nav(); ?>
         </div>
     <?php } );
 
     add_action( 'genesis_header', function() {
         ?>
         <div class="sandwich-bar search-bottom-bar">
-            <button id="search-toggle" class="sandwich-button search-toggle" aria-expanded="false" aria-pressed="false"><i class="fas fa-search"></i><span class="screen-reader-text">Open Search</span></button>
             <?php get_search_form(); ?>
         </div>
     <?php

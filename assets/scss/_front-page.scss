@@ -1,19 +1,7 @@
 #logo {
-    margin: 0 auto;
-
-    @media screen and (orientation: landscape) {
-        float: left;
-        width: 25%;
-        height: auto;
-        margin: 0 $base-spacing $base-spacing 0;
-    }
-
-    @include pond {
-        float: left;
-        width: 25%;
-        height: auto;
-        margin: 0 $base-spacing $base-spacing 0;
-    }
+    margin: 0 ( $base-spacing / 5 );
+    height: auto;
+    width: 128px;
 }
 
 #left-eye,
