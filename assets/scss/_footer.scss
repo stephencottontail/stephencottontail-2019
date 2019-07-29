@@ -1,20 +1,55 @@
 .site-footer {
-    height: 48px;
     background-color: map-get( $blue, "300" );
     color: map-get( $white, "100" );
-    line-height: 48px;
 
     a {
         color: inherit;
     }
+
+    > * {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.search-bottom-bar {
+    flex-basis: 15rem;
+    flex-grow: 1;
+
+    .search-form {
+        display: block;
+        height: 100%;
+    }
+
+    .search-form-input {
+        height: 100%;
+        width: 100%;
+        background-color: map-get( $blue, "400" );
+        border: 0;
+        color: inherit;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &::placeholder {
+            color: map-get( $white, "100" );
+        }
+    }
+
+    .search-form-submit {
+        display: none;
+    }
 }
 
 .creds {
-    padding: 0 ( $base-spacing / 2 );
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 50%;
+    padding: ( $base-spacing / 3 ) ( $base-spacing / 2 );
     text-align: right;
 
     @include puddle {
-        padding: 0 $base-spacing;
+        padding-left: $base-spacing;
+        padding-right: $base-spacing;
     }
 
     @include pond {
@@ -66,40 +101,3 @@
     }
 }
 
-.search-bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 0 $base-spacing;
-
-    .search-toggle-active & {
-        padding-right: 0;
-    }
-
-    .search-form {
-        display: none;
-        flex: auto;
-        margin-left: $base-spacing;
-
-        .search-toggle-active & {
-            display: block;
-        }
-    }
-
-    .search-form-input {
-        width: 100%;
-        background-color: map-get( $blue, "400" );
-        border: 0;
-        color: inherit;
-        padding-top: 0;
-        padding-bottom: 0;
-
-        &::placeholder {
-            color: map-get( $white, "100" );
-        }
-    }
-
-    .search-form-submit {
-        display: none;
-    }
-}

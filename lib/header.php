@@ -18,12 +18,3 @@
             <?php genesis_do_nav(); ?>
         </div>
     <?php } );
-
-    add_action( 'genesis_header', function() {
-        ?>
-        <div class="sandwich-bar search-bottom-bar">
-            <?php get_search_form(); ?>
-        </div>
-    <?php
-    } );
-
